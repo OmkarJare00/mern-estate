@@ -1,18 +1,23 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Signin from "./pages/Signin"
-import SingUp from "./pages/SingUp"
-import About from "./pages/About"
-import Profile from "./pages/About"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';  
+import SignIn from './pages/SignIn';  
+import SignUp from './pages/SingUp';
+import About from './pages/About';  
+import Profile from './pages/Profile';
+import Header from './components/Header';
 
 export default function App() {
- 
-  return <BrowserRouter>
-    <Routes>
-      <Route path="/"        element={<Home/>}> </Route>
-      <Route path="/sign-in" element={<Signin/>}> </Route>
-      <Route path="/sing-up" element={<SingUp/>}> </Route>
-      <Route path="/about"   element={<About/>}> </Route>
-      <Route path="/profile"   element={<Profile/>}> </Route>
-    </Routes>
-  </BrowserRouter>
+  return (
+    <BrowserRouter>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/profile' element={<Profile />} />
+        console.log("first")
+      </Routes>
+    </BrowserRouter>
+  );
 }

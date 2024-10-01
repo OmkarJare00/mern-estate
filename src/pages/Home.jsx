@@ -2,8 +2,6 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div>Home 
-        sadhawkdadkmm
-    </div>
+    <div>Home</div>
   )
 }
